@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Leaderboard</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="styles_leaderboard.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">
+          <h2>Leaderboard</h2>
+        </div>
+    </div>
+
+    <div class="container">
+    </div> <!-- ./container -->
+
+    <div class="container">
+        <div class="containerQuestion">
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Email</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                </tbody>
+                </table>
+        </div>
+    </div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
+    <script src="model/model_leaderboard.js"></script>
+    <script src="controller/controller_leaderboard.js"></script>
+    <script src="view/view_leaderboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.title {
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.test {
+    display:inline-block;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 1.0vw;
+}
+
+#signout {
+    float: right;
+}
+
+.score {
+    margin-left: 0.5vw;
+    font-size:1.4em;
+    text-align: center;
+}
+
+.alphabet {
+    margin:0.8vw;
+    width: 33px;
+    height: 40px;
+
+    background-color: blue;
+    color: white;
+}
+
+button:disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+
+
+.containerWord {
+    margin-top: 3.5vw;
+    text-align: center;
+}
+
+.containerButton {
+    padding-top: 6.0vw;
+    text-align: center;
+}
+
+
+#chosenWord {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+  
+ #chosenWord li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 5px;
+    font-size:4.7vw;
+    color: black;
+}
+
+#defn {
+    font-size: 1.3em;
+}
+
+.winMsg {
+    color: limegreen;
+}
+
+.loseMsg {
+    color: red;
+}
+
+.tryMsg {
+    color: black;
+}
+
+#reset {
+    margin: 5vw;
+}

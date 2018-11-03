@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>COMP 4711 Lab 3</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="test">
+        <div id="signout">
+            <button class="btn btn-danger" onclick="goToLogin()">Sign Out</button>
+            <p id="user">Logged in as : </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Hangman</h2>
+        <p id="tries">Number of Tries Remaining : 7</p> 
+    </div>
+
+    <div class="container">
+        <div id="score" class="score">
+            <p>Score: 0</p>
+        </div>
+    </div>
+
+    <div id="alphaBtnContainer" class="container">
+        <div id="alphaBtns" class="btn-group">
+        </div>
+    </div>
+    
+    <div class="containerWord">
+        <div id="word" class="word">
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="defn">
+        </div>
+        
+    </div>
+
+    <div class="containerButton">
+        <button class="btn" id="reset" onclick="resetGame()">Restart</button>
+        <button class="btn" id="leaderboard" onclick="goToLeaderboard()">Leaderboard</button>
+        <button class="btn" onclick="updateScore()">Update Score</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-database.js"></script>
+    <script src="model/model.js"></script>
+    <script src="controller/controller.js"></script>
+    <script src="view/view.js"></script>
+</body>
+</html>
