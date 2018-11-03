@@ -1,7 +1,7 @@
 displayLeaderboard = () => {
 
     scores.sort(function(a, b){
-        return b.score - a.score;
+        return b.totalScore - a.totalScore;
     });
     let tbody = document.getElementById('tablebody');
 
