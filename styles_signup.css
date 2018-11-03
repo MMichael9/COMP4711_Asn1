@@ -17,3 +17,13 @@
     text-align: center;
     margin: 2.5vw;
 }
+
+.errMsg {
+    color: red;
+    font-size: 2.1vw;
+}
+
+.errMsgPswd{
+    color: red;
+    font-size: 1.5vw;
+}

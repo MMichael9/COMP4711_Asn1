@@ -10,11 +10,6 @@ displayLeaderboard = () => {
         let userEmail = scores[i].email;
         let userScore = scores[i].totalScore;
 
-        console.log(userEmail + ": " + userScore);
-        // let li = document.createElement("li");
-        // li.innerHTML = email + ": " + score
-        // ol.appendChild(li);
-
         let tr = document.createElement("tr");
 
         let rank = document.createElement("td")
