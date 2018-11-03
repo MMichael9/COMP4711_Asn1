@@ -1,7 +1,7 @@
 displayErrMsg = () => {
 
     let error = document.getElementById('error');
-    error.innerHTML = "<i>Please fill in all fields</i>";
+    error.innerHTML = login_allfields;
     error.setAttribute("class", "errMsg");
 
 }
@@ -15,7 +15,7 @@ clearErrMsg = () => {
 invalidUser = () => {
 
     let error = document.getElementById('error');
-    error.innerHTML = "<i>You must sign up to play !</i>";
+    error.innerHTML = login_signup;
     error.setAttribute("class", "errMsg");
 
 }

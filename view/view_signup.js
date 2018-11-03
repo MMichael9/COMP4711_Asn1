@@ -1,20 +1,20 @@
 displayErrMsg = () => {
 
     let error = document.getElementById('error');
-    error.innerHTML = "<i>Please fill in all fields</i>";
+    error.innerHTML = signup_allfields;
     error.setAttribute("class", "errMsg");
 
 }
 
 displayEmailMsg = () => {
     let error = document.getElementById('error');
-    error.innerHTML = "<i>Use of improper email...Please try again</i>";
+    error.innerHTML = signup_emailmsg;
     error.setAttribute("class", "errMsg");
 }
 
 displayPswdMsg = () => {
     let error = document.getElementById('pswdErr');
-    error.innerHTML = "<i>Password must be more than 8 characters</i>";
+    error.innerHTML = signup_pswdmsg;
     error.setAttribute("class", "errMsgPswd");
 }
 

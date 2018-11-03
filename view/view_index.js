@@ -59,7 +59,7 @@ updateStats = () => {
 
     let tries = document.getElementById('tries');
     tries.setAttribute("class", "tryMsg");
-    tries.innerHTML = "Number of Tries Remaining : " + attemptsLeft;
+    tries.innerHTML = index_numtries + attemptsLeft;
 }
 
 // Enable alphabet buttons upon reset
@@ -98,7 +98,7 @@ displayWinMsg = () => {
 
     let tries = document.getElementById('tries');
     tries.setAttribute("class", "winMsg");
-    tries.innerHTML = "Congratulations...You Win";
+    tries.innerHTML = index_win;
 }
 
 // Update the text underneath title to display a game over message if the user guesses the word
@@ -106,6 +106,6 @@ displayLoseMsg = () => {
 
     let tries = document.getElementById('tries');
     tries.setAttribute("class", "loseMsg");
-    tries.innerHTML = "Game Over...You Lose";
+    tries.innerHTML = index_gameover;
 
 }
