@@ -13,17 +13,6 @@ var firebaseRef = database.ref('Dictionary/');
 var firebaseRefLeaderboard = database.ref('Leaderboard/');
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var words = ["tattoo", "electricity", "hockey", "basketball", "tennis", "clock", "speaker", "database", "computer", "programming"];
-var definitions = ["a form of body modification where a design is made by inserting ink", 
-                   "the set of physical phenomena associated with the presence and motion of electric charge.",
-                   "sport played with a black rubber circle", 
-                   "sport played on a wooden court", 
-                   "sport played with a green ball", 
-                   "this thing tells time", 
-                   "this thing plays music very loud", 
-                   "a structured set of data held in a computer, especially one that is accessible in various ways", 
-                   "an electronic device for storing and processing data, typically in binary form, according to instructions given to it in a variable program", 
-                   "the action or process of writing computer programs"];
 var chosenWord;
 var wordsIndex;
 var score = 0;
@@ -50,7 +39,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-
+// Retrieve Users totalScore for Leaderboard
 var ref = firebase.database().ref()
 
 ref.child("Leaderboard").once('value', gotUserData);
@@ -68,7 +57,7 @@ function gotUserData(snapshot) {
 
 }
 
-
+// Load dictionary from database then begin the game
 firebaseRef.once("value", function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
 
@@ -77,5 +66,6 @@ firebaseRef.once("value", function(snapshot) {
         word_list.push(item);
         });
 }).then(function() {
-    loadGame();
+  createButtons();  
+  loadGame();
 });

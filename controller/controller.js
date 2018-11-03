@@ -1,5 +1,5 @@
 // Load in game elements when the page is created
-function loadGame() {
+loadGame = () => {
     console.log("Loading Game...");
 
     // Call functions to create/populate UI
@@ -13,8 +13,8 @@ function loadGame() {
 }
 
 // Randomly selects a word from array and assigns it for guessing
-function getWord() {
-    var x = Math.floor((Math.random() * words.length));
+getWord = () => {
+    let x = Math.floor((Math.random() * word_list.length));
 
     chosenWord = word_list[x].word;
     wordsIndex = x;
@@ -56,7 +56,7 @@ function buttonOnClick() {
 }
 
 // Check if user has guessed every letter of the chosen word
-function checkVictory() {
+checkVictory = () => {
 
     if (correct == chosenWord.length) {
         disableButtons();
@@ -67,7 +67,7 @@ function checkVictory() {
 }
 
 // Check if user has run out of guesses
-function checkAttempts() {
+checkAttempts = () => {
 
     if(attemptsLeft == 0) {
         disableButtons();
@@ -78,7 +78,7 @@ function checkAttempts() {
 }
 
 // Resets the game but keeps user score
-function resetGame() {
+resetGame = () => {
 
     attemptsLeft = 7;
     correct = 0;
@@ -88,17 +88,6 @@ function resetGame() {
     enableButtons();
 
     deleteDivs();
-
-    /*
-    for (let i = 0; i < words.length; i++) {
-        
-        let newWord = {word: words[i], def: definitions[i]}
-        let newChildRef = firebaseRef.push();
-        newChildRef.set(newWord);
-
-    }
-    */
-
 }
 
 goToLeaderboard = () => {
@@ -110,9 +99,6 @@ goToLogin = () => {
 }
 
 window.onbeforeunload = function (e) {
-    console.log("updatescore");
-
-    console.log("update score");
     var db = firebase.database();
     db.ref("Leaderboard/" + currentUserID + "/totalScore").set(totalScoreDB + score);
 

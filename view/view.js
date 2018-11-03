@@ -1,10 +1,9 @@
-createButtons();
 // Create the buttons (Alphabet) that is used to guess the word and append to the corresponding div
-function createButtons() {
+createButtons = () => {
 
-    for(var i = 0; i < alphabet.length; i++) {
-        var btn = document.createElement("BUTTON");
-        var t = document.createTextNode(alphabet[i]);
+    for(let i = 0; i < alphabet.length; i++) {
+        let btn = document.createElement("BUTTON");
+        let t = document.createTextNode(alphabet[i]);
         btn.setAttribute("class", "alphabet");
         btn.setAttribute("id", alphabet[i]);
         btn.setAttribute("value", alphabet[i]);
@@ -17,14 +16,14 @@ function createButtons() {
 }
 
 // Add area that stores the word the user is trying to guess
-function addWordHolder() {
+addWordHolder = () => {
 
-    var wordHolder = document.getElementById('word');
-    var correct = document.createElement('ul');
+    let wordHolder = document.getElementById('word');
+    let correct = document.createElement('ul');
 
-    for (var i = 0; i < chosenWord.length; i++) {
+    for (let i = 0; i < chosenWord.length; i++) {
         correct.setAttribute('id',  'chosenWord');
-        var guess = document.createElement('li');
+        let guess = document.createElement('li');
         guess.setAttribute('class', 'guess');
         guess.setAttribute('id', 't'+i);
         guess.innerHTML = "_";
@@ -36,18 +35,18 @@ function addWordHolder() {
 }
 
 // Retrieve Div that holds the definition and write it depending on the chosen word
-function getDefn() {
+getDefn = () => {
 
-    document.getElementById('defn').innerHTML = definitions[wordsIndex];
+    document.getElementById('defn').innerHTML = word_list[wordsIndex].def;
 
 }
 
 // Disable alphabet buttons so they cant be clicked
-function disableButtons() {
+disableButtons = () => {
 
-    var btns = document.getElementsByClassName('alphabet');
+    let btns = document.getElementsByClassName('alphabet');
 
-    var i;
+    let i;
     for (i = 0; i < btns.length; i++) {
 
         btns[i].disabled = true;
@@ -56,19 +55,19 @@ function disableButtons() {
 }
 
 // Display correct number of tries remaining (called on reset)
-function updateStats() {
+updateStats = () => {
 
-    var tries = document.getElementById('tries');
+    let tries = document.getElementById('tries');
     tries.setAttribute("class", "tryMsg");
     tries.innerHTML = "Number of Tries Remaining : " + attemptsLeft;
 }
 
 // Enable alphabet buttons upon reset
-function enableButtons() {
+enableButtons = () => {
     
-    var btns = document.getElementsByClassName('alphabet');
+    let btns = document.getElementsByClassName('alphabet');
 
-    var i;
+    let i;
     for (i = 0; i < btns.length; i++) {
 
         btns[i].disabled = false;
@@ -77,9 +76,9 @@ function enableButtons() {
 }
 
 // When restarting, divs need to be cleared and then re added based on new word chosen
-function deleteDivs() {
+deleteDivs = () => {
 
-    var div = document.getElementById('word');
+    let div = document.getElementById('word');
 
     while(div.firstChild){
         div.removeChild(div.firstChild);
@@ -87,7 +86,7 @@ function deleteDivs() {
 
     addWordHolder();
 
-    var defnDiv = document.getElementById('defn');
+    let defnDiv = document.getElementById('defn');
 
     defnDiv.removeChild(defnDiv.firstChild);
 
@@ -95,17 +94,17 @@ function deleteDivs() {
 }
 
 // Update the text underneath title to display a Congratulations message if the user guesses the word
-function displayWinMsg() {
+displayWinMsg = () => {
 
-    var tries = document.getElementById('tries');
+    let tries = document.getElementById('tries');
     tries.setAttribute("class", "winMsg");
     tries.innerHTML = "Congratulations...You Win";
 }
 
 // Update the text underneath title to display a game over message if the user guesses the word
-function displayLoseMsg() {
+displayLoseMsg = () => {
 
-    var tries = document.getElementById('tries');
+    let tries = document.getElementById('tries');
     tries.setAttribute("class", "loseMsg");
     tries.innerHTML = "Game Over...You Lose";
 
