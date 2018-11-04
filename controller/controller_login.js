@@ -1,3 +1,5 @@
+// Determine if all input fields for login are input correctly
+// if they are, log in the user 
 loginUser = () => {
 
     let flag = 0;
@@ -32,6 +34,7 @@ loginUser = () => {
 
 }
 
+// Pass control to sign up page
 directToSignup = () => { 
     window.location = 'signup.html';
 }

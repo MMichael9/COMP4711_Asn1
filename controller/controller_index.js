@@ -90,14 +90,17 @@ resetGame = () => {
     deleteDivs();
 }
 
+// Pass control to leaderboard page
 goToLeaderboard = () => {
     window.location = 'leaderboard.html';
 }
 
+// Pass control to login page
 goToLogin = () => {
     window.location = 'login.html';
 }
 
+// When user leaves page, save their score in firebase
 window.onbeforeunload = function (e) {
     var db = firebase.database();
     db.ref("Leaderboard/" + currentUserID + "/totalScore").set(totalScoreDB + score);

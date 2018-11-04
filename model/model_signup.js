@@ -22,12 +22,14 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       console.log("user signed in");
-
+      
+      // create leaderboard entry for new user
       firebase.database().ref('Leaderboard/' + user.uid).set({
         email: email.value,
         totalScore: 0
       });
 
+      // upon sign up, send user to hangman page
       window.location = "index.html"
     } else {
       // No user is signed in.

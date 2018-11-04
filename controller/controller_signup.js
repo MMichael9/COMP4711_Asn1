@@ -1,3 +1,5 @@
+// Determine if input fields for sign up are correct.
+// If they are, add the user to firebase
 addUser = () => {
 
     let flag = 0;
@@ -28,6 +30,7 @@ addUser = () => {
     }
 }
 
+// Add user to firebase with their email and password
 addToFirebase = () => {
 
     console.log("add user to firebase");
@@ -44,6 +47,7 @@ addToFirebase = () => {
 
 }
 
+// Send control to login page
 directToLogin = () => {
     window.location = 'login.html';
 }

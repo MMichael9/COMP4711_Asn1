@@ -11,8 +11,11 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var firebaseRefLeaderboard = database.ref('Leaderboard/');
 
+// array of users scores
 var scores = [];
 
+// push each item from database into the score array, 
+//display the leaderboard upon completion
 firebaseRefLeaderboard.once("value", function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
 
@@ -22,6 +25,5 @@ firebaseRefLeaderboard.once("value", function(snapshot) {
         scores.push(item);
         });
 }).then(function() {
-    // display the fucking word queer
     displayLeaderboard();
 });

@@ -1,10 +1,13 @@
+// Display the leaderboard of scores 
 displayLeaderboard = () => {
 
+    // sort array to get top scores first 
     scores.sort(function(a, b){
         return b.totalScore - a.totalScore;
     });
     let tbody = document.getElementById('tablebody');
 
+    // create each element in the table
     for(let i = 0; i < scores.length; i++) {
 
         let userEmail = scores[i].email;

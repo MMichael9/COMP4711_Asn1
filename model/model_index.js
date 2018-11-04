@@ -12,6 +12,7 @@ var database = firebase.database();
 var firebaseRef = database.ref('Dictionary/');
 var firebaseRefLeaderboard = database.ref('Leaderboard/');
 
+//Hangman variables
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var chosenWord;
 var wordsIndex;
